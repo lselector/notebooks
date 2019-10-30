@@ -83,7 +83,16 @@ facebook, twitter:
     Ian Goodfellow
     Yoshua Bengio
     Jürgen Schmidhuber
+    Andrew Ng
     etc.
+
+Listen to these lectures:
+
+  Andrew Ng at Amazon re:MARS 2019
+    - https://www.youtube.com/watch?v=j2nGxw8sKYU
+
+  C3.ai - Thomas Siebel on Digital Transformation
+    - https://www.youtube.com/watch?v=4Ie4gat6idQ
 
 =================================================
 7. 
