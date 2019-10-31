@@ -1,8 +1,4 @@
 <html>
-<head>
-<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-<title>Lev WhatsApp posts</title>
-</head>
 <body>
 =================================================<br/>
 2019-03-05<br/>
