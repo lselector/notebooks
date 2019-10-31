@@ -1,0 +1,549 @@
+=================================================
+2019-03-05
+Augmenting dataset 
+ - https://youtu.be/YFL-MI5xzgg
+
+=================================================
+2019-03-09
+bags of features, explain-ability
+ - https://youtu.be/QpptSohzuDo
+
+=================================================
+2019-03-11
+How neural networks learn
+ - https://youtu.be/pFWiauHOFpY
+
+=================================================
+2019-03-13
+Geoff Hinton
+ - http://youtu.be/l9RWTMNnvi4
+
+=================================================
+2019-03-17
+Hello, sending a 4-page PDF file explaining the term "Bayes", "Bayesian", etc.
+
+=================================================
+2019-03-18
+Things to know in ML & AI
+
+linear regression
+  (fit points with a straight line)
+
+ML classification:
+ - logistic regression
+ - Random Forest
+ - XGBoost
+ - Naive Bayes
+ - SVM (Support Vector Machine)
+ - KNN (K-Nearest Neighbors)
+ - K-means
+ - gaussian mixture model clustering
+
+Neural Networks
+    MLP = Multi-Level Perceptron
+    CNN = Convolutional Neural Network
+    ResNet - State of the art CNN
+    U-Net & Image segmentation
+    RNN = Recurrent Neural Network
+    LSTM & GRU
+    GAN = Generative Adversarial Network
+    Variational Auto-Encoder
+    etc.
+    etc.
+
+Reinforcement Learning
+  (games, robotics, self-driving cars, etc.)
+
+Then, of course, standard terms like:
+ - underfitting, overfitting
+ - regularization
+ - training set, validation & test sets
+ - cross-validation folding
+ - confusion matrix
+ - ROC curve
+ - Precision & Recall
+ - cross-entropy and KL-divergence
+ - NLP (Natural Language Processing)
+ - tf-idf, sentiment, intent
+ - word2vec
+ - hidden layers, latent factors
+ - explainability, bags of words/features
+ - Monte-Carlo
+ - Numenta
+ - PCA
+ - Propensity Score Matching
+ - linear discriminant analysis
+ - Topic Modeling
+ - Restricted Boltzman Machine
+ - Recommender Systems, Collaborative filtering
+ - Google translate, Attention Mechanism
+ - etc.
+ - etc.
+
+ The lists above cover some common terms
+ well known to any Data Scientist today.
+
+ This WhatsApp distribution list is not a
+ systematic tutorial.
+ But over time we will cover many of these topics.
+
+For example, here is a 4-min video explaining
+Random Forest classification:
+ - https://www.youtube.com/watch?v=LIPtRVDmj1M
+
+=================================================
+2019-03-20
+DeepMasterPrints
+ - https://arxiv.org/pdf/1705.07386.pdf
+Authors have created a way to open ~70% of fingerprint protected devices.
+They basically created a method to create an artificial fingerprint
+which can be used as a master key to open 70% of fingerprint-protected devices.
+This is amazing.
+They used Generative Adversarial Network methodology.
+
+=================================================
+2019-03-25
+Random Forest (RF) - a simple classification method.
+
+Idea:
+
+Instead of one decision tree create a "forest" of trees.
+(typically 100-200 or more trees).
+
+Each tree is trained separately using a random
+subset of data and features.
+
+The data and features for each tree are randomly selected
+using common "Bootstrap Sampling" technique
+(which simply means - select randomly with replacement)
+  - https://www.youtube.com/watch?v=tTZybQTE0dw
+
+Once 100 trees are trained on random samples,
+this "Random Forest" of decision trees
+can be used to make classification decisions
+by voting (aggregating, averaging).
+
+RF is example of an "Ensemble" method.
+RF is example of "Bagging" method.
+Bagging means "Bootstrap Sampling + Aggregating"
+
+RF is doing democratic voting.
+It is averaging.
+Thus it is good at removing variance in decisions.
+It makes decisions more stable, removes overfitting.
+
+But unfortunately RF can not remove bias.
+If individual decisions are biased in the same way,
+the average will be also biased the same way.
+RF does not remove bias.
+
+There is another ensemble technique called "Boosting"
+which is designed to remove bias.
+Boosting is done step-by-step sequentially.
+Thus boosting methods are usually slower than Bagging.
+Typical example of boosting method is XGBoost.
+
+It is interesting to think of a system of government
+which would use "Boosting" instead of democratic "Bagging". 
+
+=================================================
+2019-03-31
+
+What is the best way to explain the bias-variance 
+trade-off in layman’s terms ?
+
+https://www.quora.com/What-is-the-best-way-to-explain-the-bias-variance-trade-off-in-layman%E2%80%99s-terms
+
+Topic: BIAS-VARIANCE TRADE-OFF.
+
+Model_Error = Bias + Vairance + Noise
+
+Bias:
+Model is too simple.
+For example, model is straight line.
+Model doesn't fit data closely.
+Adding data doesn't help.
+Training longer doesn't help.
+Problem is with the model not fitting data.
+
+Vairance:
+Variance happens when algorithm tries 
+to fit training data too well.
+It matches training data very well (over-fitting),
+but error on test data set doesn't decrease.
+In fact, error on test data can increase.
+
+Noise:
+Data will always have noise from sample to sample.
+
+Look at pictures here:
+
+https://www.quora.com/What-is-the-best-way-to-explain-the-bias-variance-trade-off-in-layman%E2%80%99s-terms
+
+=================================================
+2019-04-08
+Imagine that it is possible to use 3D-printer 
+to print pre-trained Neural Network. 
+It then can perform very fast 
+and use very low power to operate.
+ - https://www.photonics.com/Articles/UCLA_Researchers_Create_All-Optical_Diffractive/a63751
+ - https://twimlai.com/twiml-talk-237-deep-learning-in-optics-with-aydogan-ozcan/
+ - https://arxiv.org/pdf/1804.08711.pdf
+Some nice pictures showing the set-up and real 
+classifier (for hand-written digits)
+
+=================================================
+2019-04-08
+Here is a gallery of images generated by modern 
+GANs (Generative Adversarial Network). 
+ - https://thispersondoesnotexist.com/
+
+Click on image - and a small popup will show 
+on the right-bottom. There is a link there 
+"Click for another person" - you can click 
+multiple times. Amazing quality.
+
+=================================================
+2019-04-10
+Very good thinking from Andrew Ng - watch 10 min 
+of this video starting at 40 min 15 sec timestamp 
+until 50 min 15 sec
+ - https://www.youtube.com/watch?v=qnDlFTYnbR0
+=================================================
+2019-04-17
+Great video from Siraj - How AI will look in 2040 ?!
+ - https://youtu.be/mvwBgAqrheo
+
+=================================================
+2019-04-21
+This is not about ML&AI, but it is amazing.
+A working heart can now be 3D-printed from 
+patient's own cells !
+
+"Israeli scientists print 3D heart with human 
+tissue and vessels":
+ - https://www.youtube.com/watch?v=qe0hgBdk7V8
+=================================================
+2019-04-27
+Natural Language Processing - short video from Siraj (March 2019)
+ - https://www.youtube.com/watch?v=bDxFvr1gpSU
+Siraj talks about different language models
+(terms like Seq2Seq, Attention, Transformer, BERT).
+
+Here is a good textual explanation by Maxime Allard:
+ - https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04
+
+And here are two "classical" papers to know:
+
+(2017) Attention Is All You Need
+ - https://arxiv.org/pdf/1706.03762.pdf
+
+(2018) BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+ - https://arxiv.org/pdf/1810.04805.pdf
+ 
+=================================================
+2019-04-28
+Tesla plans to provide taxi services at 1/10th of 
+the price of Uber or Lyft. And Tesla car owners 
+will be able to let their car to work as a taxi 
+and earn ~$30K/year, $300K over car's lifetime. 
+Musk said: "The fundamental message that 
+consumers should be taking today is that 
+it is financially insane to buy anything 
+other than a Tesla".
+
+https://www.businessinsider.com/tesla-takes-direct-aim-uber-lyft-with-robotaxi-plan-2019-4
+=================================================
+2019-05-15
+12 things I wish I’d known before starting as a Data Scientist
+ - https://link.medium.com/vEanNBN7HW
+=================================================
+2019-05-18
+This is an amazing treat to listen to Ken Thompson,
+the original creator of Unix. Today Unix is everywhere. 
+Linux, Cloud, mobile phones and tablets. 
+Even Microsoft is now adopting unix. 
+I know this lecture is not related to ML & AI, 
+but this is just such a gem to listen 
+"from the horses mouth" about first days, 
+a must-watch for any computer engineer.
+
+ - https://www.youtube.com/watch?v=EY6q5dv_B-o
+=================================================
+2019-05-22
+Robot trains to throw objects into a box in real 
+physical world and in simulation. 
+I guess soon we will have professional basketball 
+players-robots ?
+ - https://youtu.be/JJlSgm9OByM
+=================================================
+2019-05-29
+This short video is 3.5 years old - still excellent 
+explanation of why we need multiple layers in 
+Neural Networks
+ - https://youtu.be/He4t7Zekob0
+=================================================
+2019-05-31
+Look at figure 1 in this article.
+Using massive compute power at Google researches 
+has found optimized architectures which provide 
+great quality of predictions with much smaller 
+numbers of nodes in the model !!
+
+https://arxiv.org/pdf/1905.11946.pdf
+=================================================
+2019-06-02
+Very interesting work on creating interpretable models.
+Cynthia Rudin's latest paper was just published
+in Nature - and exploded all  over twitter:
+ - https://www.nature.com/articles/s42256-019-0048-x
+ - https://arxiv.org/abs/1811.10154
+ - https://arxiv.org/pdf/1811.10154
+
+You can listen to here in these videos:
+  New Algorithms for Interpretable Machine Learning
+    - https://www.youtube.com/watch?v=FsLP-kkvIIw
+  Secrecy, Criminal Justice, and Variable Importance
+    - https://www.youtube.com/watch?v=KAatZNd-7LM
+  QA
+    - https://www.youtube.com/watch?v=p4DTrcK6tLs
+=================================================
+2019-06-03
+Living Portraits - AI brings Mona Lisa to life:
+ - https://www.youtube.com/watch?v=P2uZF-5F1wI
+
+See more examples here (Dostoyevskiy, Einstein, Mona Lisa, etc.):
+ - https://www.youtube.com/watch?v=p1b5aiTrGzY
+
+Read:
+ - https://www.smithsonianmag.com/smart-news/mona-lisa-comes-life-computer-generated-living-portrait-180972296/
+ - https://arxiv.org/abs/1905.08233v1
+=================================================
+2019-06-11
+Nice - lots of common concepts explained in one lecture.
+ - https://www.youtube.com/watch?v=a07iwuDWhys
+=================================================
+2019-06-20
+Google Translatotron - translates between languages 
+and voices without converting to text:
+
+ - https://www.youtube.com/watch?v=38ZXwJj6j8k
+
+Attention in Neural Networks - with examples:
+
+ - https://www.youtube.com/watch?v=W2rWgXJBZhU
+=================================================
+2019-06-21
+Warner Music signed an algorithm to a record deal
+ - https://www.theverge.com/2019/3/27/18283084/warner-music-algorithm-signed-ambient-music-endel
+
+=================================================
+2019-06-24
+Above is my 8-page PPT about Ensemble Learning, Random Forest and Boosting. Enjoy.
+
+=================================================
+2019-06-30
+Demo of H2O Driverles
+ - https://www.youtube.com/watch?v=wcyMBRRLmqs
+
+=================================================
+2019-07-18
+Elon Musk's Neuralink presentation
+http://youtu.be/lA77zsJ31nA
+
+=================================================
+2019-07-21
+Bidirectional learning. Same network can be used 
+as classifier (discriminator) in one direction, 
+and as generator (similar to GAN) in back-direction. 
+Result - state-of-the-art accuracy on adversarial 
+examples of hand-written digits
+
+https://arxiv.org/pdf/1805.08006.pdf
+
+=================================================
+2019-07-30
+Automatic Machine Learning
+Nice explanation, especially at time mark 7:30 
+where Siraj starts talking about specific AutoML frameworks.
+
+https://youtu.be/jn-22XyKsgo
+
+=================================================
+2019-08-03
+
+I highly recommend to subscribe to Abundance Insider. 
+You will be receiving one email per week - very good information.
+
+https://www.diamandis.com/blog/abundance-insider-aug-3-2019
+
+=================================================
+2019-08-05
+Evolving Generative Adversarial Networks.
+
+Elegant idea. Standard GAN uses just one generator. 
+But here they use multiple generators, do natural selection, 
+then create new generators as variation of winners. 
+This is Darwin’s evolution in action!
+
+https://youtu.be/ni6P5KU3SDU
+
+=================================================
+2019-08-14
+https://www.youtube.com/watch?v=pg827uDPFqA
+
+The short video above explains what is Euler's number "e" 
+in a very effective and entertaining manner
+
+=================================================
+2019-08-22
+https://techcrunch.com/2019/08/19/the-five-technical-challenges-cerebras-overcame-in-building-the-first-trillion-transistor-chip/
+
+1.2 Trillion transistors as compared with records 
+of 20 Bln on the market. Huge jump!! 
+400,000 processing cores , 
+15 Kwatts of power (difficult to cool it). Wow!
+
+Deep learning is profoundly computationally intensive. 
+A recent report by OpenAI showed that,
+between 2012 and 2018, the compute used to train 
+the largest models increased by 300,000X.
+
+In other words, AI computing is growing 
+at a rate that is 25,000X faster than Moore’s law 
+at its peak. 
+
+AI compute demand is doubling every 3.5 months.
+
+The Cerebras Wafer Scale Engine (WSE) 
+is more than 56X larger than the largest
+graphics processing unit, 
+containing 3,000X more on chip memory 
+and more than 10,000X the memory bandwidth.
+=================================================
+2019-08-28
+Sending a short 4-page PDF explaining common
+terms used to describe model quality - ROC curve, 
+Precision, Recall, Accuracy, Confusion Matrix,
+AUC and F1 score. Enjoy!
+=================================================
+2019-09-14
+
+Amazing twenty minutes of wisdom from Andrew Ng. 
+Number of AI jobs increased 35-times in last two years. 
+Exponential growth of number of AI teams and companies. 
+Main areas of growth of AI, Andrew’s own focus.
+
+https://youtu.be/j2nGxw8sKYU
+
+=================================================
+2019-09-22
+Moore's Law animation
+
+https://www.youtube.com/watch?v=7uvUiq_jTLM
+
+=================================================
+2019-09-30
+
+Survivor Bias in World War 2
+
+It is dangerous to use data "as is" to create a model,
+because the data may be biased to start with,
+and it can easily lead to creating a biased model
+
+Problem occur when we have:
+ - under-represented features (missing data)
+ - over-represented features,
+ - "target leakage" effect.
+
+Survivorship bias:
+ - https://www.youtube.com/watch?v=B3YQJ5DwTzM
+
+Gender Bias:
+ - https://www.youtube.com/watch?v=p60-Jdq754A
+
+Bias in criminal justice:
+ - https://www.youtube.com/watch?v=Gi4YeRqfb24
+
+Target Leakage:
+ - https://www.youtube.com/watch?v=y8qaI5mpJeA
+
+=================================================
+2019-10-08
+
+DeepMind Shows How Expensive the AI-Race Is & Google's Strategy to Win It
+
+https://link.medium.com/7hxPE3ZtC0
+
+=================================================
+2019-10-12
+
+I recommend to subscribe to “The Batch”
+
+https://www.deeplearning.ai/thebatch/
+
+=================================================
+2019-10-23
+
+If you are a Data Scientist, you must have heard about H2O.ai.
+This company was developing tools for Machine Learning since 2011.
+Approx. 250,000 users from 18,000 companies are using them.
+These are THE tools you want to use.
+
+H2O tools are free for academic research. 
+And most of them are open source.
+There are also commercial tools, like “H2O Driverless AI”:
+  - https://www.h2o.ai/products/h2o-driverless-ai/
+
+Yesterday, October 22nd I have attended H2OWORLD.
+It is a big annual event in New York City.
+See the list of 60+ speakers and the agenda here:
+  - https://www.h2o.ai/h2oworldnewyork/
+
+The main announcement was the H2O “Q”.
+  - https://www.h2o.ai/h2o-q/
+
+Another announcements was that Driverless AI
+is now available as SaaS on cloud:
+  - http://docs.h2o.ai/puddle/userguide/_build/html/index.html
+
+=================================================
+2019-10-29
+Today's note is about Tom Siebel and his companies.
+
+Tom Siebel was employee #20 at Oracle, 
+then in 1993 he started his own 
+Company “Siebel Systems”, 
+which he sold back to Oracle in 2016
+for $5.85 Bln.
+Then in 2009 he started “C3 Energy”
+(Carbon-3, where 3 comes from Measure-Mitigate-Monetize), 
+which he restructured in 2011 into “C3 IoT” (Internet of Things), 
+and in 2016 into C3.ai.
+Today C3.ai is evaluated at $2+ Bln - and growing fast.
+
+In his last book “Digital Transformation" 
+he writes that AI and related technologies
+are disruptive - a life extinction event
+for corporations (similar to ice age for dinosaurs).
+He states that since 2000, 52 percent 
+of Fortune 500 companies have fallen off the list.
+
+So in order to survive, organizations 
+must undergo digital transformation 
+by using elastic cloud computing, 
+big data, artificial intelligence, 
+and internet of things. 
+The book provides a 10-point 
+CEO action plan.
+
+Watch this short interview (~ 1 year old):
+ - https://www.youtube.com/watch?v=3Eipoa5wYzk
+
+Also this full keynote Apr 8, 2019 at Carnegie Mellon:
+ - https://www.youtube.com/watch?v=4Ie4gat6idQ
+=================================================
+
+=================================================
+=================================================
+=================================================
