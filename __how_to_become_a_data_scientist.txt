@@ -21,6 +21,18 @@ It has dual graphics:
 Important:
   It has SSD with fast PCIe 2.0 x4 interface.
 
+Alternatively if you don't like Mac, there are
+many other options, for example:
+
+MacBook Pro 15"
+
+Lambda Labs TensorBook:
+  https://lambdalabs.com/deep-learning/laptops/tensorbook/max/customize
+
+Dell Precision 5540:
+  https://www.dell.com/en-us/work/shop/cty/pdp/spd/precision-15-5540-laptop
+  https://wesmckinney.com/blog/linux-laptop-experience/
+
 =================================================
 2. 
 You need to learn constantly. 
