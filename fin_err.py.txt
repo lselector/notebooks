@@ -2,6 +2,8 @@
 """
 fin_err() - error function to calculate quality of a forecast.
 
+by Lev Selector, February 2021
+
 Normalization of error function should not depend only 
 on min/max or mean, but probably on combination of 
 different characteristics, and treat "zero" cases carefully.
