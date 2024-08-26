@@ -1,0 +1,96 @@
+
+"""
+fin_err() - error function to calculate quality of a forecast.
+
+by Lev Selector, February 2021
+
+Normalization of error function should not depend only 
+on min/max or mean, but probably on combination of 
+different characteristics, and treat "zero" cases carefully.
+
+ - If some points approach zero, the whole sum goes to infinity 
+   and invalidates the error estimate.
+ - If we have two curves behaving in a similar manner, but one 
+   of them is closer to zero, the error for this curve will 
+   by much higher.
+ - If we shift the values, then the question is by how much.
+ - If we normalize by the amplitude of "oscillations", then 
+   we can get meaningless results when the values are close 
+   to zero and oscillations are small.
+
+We have designed special function fin_err() to overcome all 
+these problems.
+It has optional optimization parameters. 
+By default they are tuned for financial data.
+
+For normalization it calculates the scale of the signal 
+as a max(amplitude, level).
+
+For example, if the values are in range [-95,95], then 
+level ~100, amplitude ~10, scale = max(100,10) = 100.
+
+To avoid dividing by zero, function calculates the minimum 
+positive denominator value. It also limits the output error.
+"""
+
+# --------------------------------------------------------------
+def fin_err(actual, 
+            predicted, 
+            norm=None,
+            err_type='mae',   # mae or rmse
+            noise_level_relative=1e-2,
+            noise_level_absolute=1e-2,
+            max_error=1e2):
+    """
+    # calculate relative difference 
+    # between two arrays (or lists): actual & predicted
+    # fin_err() is similar to normalized_mean_absolute_error
+    # but optimized for financial data.
+    # It takes into account not only amplitude of oscillations,
+    # but also the "level" of values.
+    # It also limits maximum error in cases when 
+    # actual signal doesn't change much
+    # optional parameters:
+    #   norm (when provided) used as denominator
+    #   noise_level_relative (default 0.01)
+    #   noise_level_absolute (default 0.01)
+    #   max_error (default 100.0)
+    """
+    Na, Np = len(actual), len(predicted)
+    if Na == 0 or Np == 0 or Na != Np:
+        return np.nan
+    np_act = np.array(actual, dtype = np.float64)
+    np_pre = np.array(predicted, dtype = np.float64)
+    if err_type == 'mae': # Mean Absolute Error
+        myerr = np.abs(np_act - np_pre).sum() / Na
+    elif err_type == 'rmse': # Root Mean Square Error
+        myerr = math.sqrt(mean_squared_error(np_act, np_pre)) 
+    else:
+        print("ERROR: err_type should be 'mae' or 'rmse', exiting ...")
+        sys.exit(1)
+    if norm and norm > 0: # normalize - and limit
+        return min (max_error, myerr / norm )  
+    v_max_act, v_min_act = np.max(np_act), np.min(np_act) # max min   
+    v_max_pre, v_min_pre = np.max(np_pre), np.min(np_pre) # max min  
+    v_amp_act   = v_max_act - v_min_act        # amplitude      
+    v_amp_pre   = v_max_pre - v_min_pre        # amplitude      
+    v_level_act = np.abs(np_act).sum() / Na    # level             
+    v_scale_act = max(v_level_act, v_amp_act)  # level
+    v_level_pre = np.abs(np_pre).sum() / Na    # scale             
+    v_scale_pre = max(v_level_pre, v_amp_pre)  # scale
+
+    if (v_scale_act <= noise_level_absolute and 
+        v_scale_pre <= noise_level_absolute):
+            return 0 # actual and predicted are both close to zero 
+        
+    denom_min = max(v_scale_act * noise_level_relative,
+                    noise_level_absolute)
+    
+    if v_scale_act > denom_min :
+        denom = v_scale_act
+    else:
+        denom = denom_min
+    
+    return min (max_error, (myerr / denom))
+
+# --------------------------------------------------------------
